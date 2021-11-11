@@ -1,0 +1,7 @@
+---
+- name: Deploy Tower
+  hosts: all
+  gather_facts: false
+  roles:
+    - preflight
+    - kubernetes

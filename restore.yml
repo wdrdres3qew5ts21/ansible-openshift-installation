@@ -1,0 +1,10 @@
+---
+- name: Restore Tower
+  hosts: all
+  gather_facts: false
+  roles:
+    - preflight
+  tasks:
+    - import_role:
+        name: kubernetes
+        tasks_from: restore

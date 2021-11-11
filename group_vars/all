@@ -1,0 +1,22 @@
+---
+tower_package_version: '3.8.4'
+tower_package_release: '1'
+
+kubernetes_deployment_name: ansible-tower
+
+kubernetes_awx_image: registry.redhat.io/ansible-tower-38/ansible-tower-rhel7
+kubernetes_awx_version: '3.8.4'
+kubernetes_postgresql_image: registry.access.redhat.com/rhscl/postgresql-10-rhel7
+kubernetes_redis_image: registry.redhat.io/rhscl/redis-5-rhel7
+kubernetes_redis_config_mount_path: "/etc/redis.conf"
+
+insights_url_base: "https://cloud.redhat.com"
+candlepin_host: "https://subscription.rhsm.redhat.com"
+candlepin_verify: "/etc/rhsm/ca/redhat-uep.pem"
+redhat_content_url: 'https://cdn.redhat.com'
+redhat_content_path: '/content/dist/rhel/server/7/7Server/x86_64/ansible-tower/3.8/os'
+automation_analytics_url: "https://cloud.redhat.com/api/ingress/v1/upload"
+insights_agent_mime: "application/vnd.redhat.tower.analytics+tgz"
+
+container_groups_image: "registry.redhat.io/ansible-tower-38/ansible-runner-rhel7"
+uwsgi_bash: "scl enable rh-postgresql10"
